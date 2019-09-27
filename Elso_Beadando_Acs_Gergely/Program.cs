@@ -14,6 +14,7 @@ namespace Elso_Beadando_Acs_Gergely
             int max = 0;
             int bekertSzam = 0;
             int bekeresSzam = 0;
+            int min = 1000000000;
             Console.WriteLine("Adja meg hány szám közül szeretné megkeresni a legnagyobbat: ");
             bekeresSzam = Convert.ToInt32(Console.ReadLine());
             for (int i = 0; i < bekeresSzam; i++)
@@ -30,7 +31,16 @@ namespace Elso_Beadando_Acs_Gergely
 
             }
             Console.WriteLine("A legnagyobb szám:{0} ", max);
-            Console.ReadKey();
+            for (int i = 0; i < lista.Count; i++)
+            {
+                if (min > lista[i])
+                {
+                    min = lista[i];
+                }
+
+            }
+            Console.WriteLine("A legkisebb szám: {0}", min);
+        Console.ReadKey();
         }
     }
 }
