@@ -10,6 +10,25 @@ namespace Elso_Beadando_Acs_Gergely
     {
         static void Main(string[] args)
         {
+            List<int> lista = new List<int>();
+            int max = 0;
+            int bekertSzam = 0;
+            Console.WriteLine("Kérem adjon meg 10számot!");
+            for (int i = 0; i < 10; i++)
+            {
+                bekertSzam = Convert.ToInt16(Console.ReadLine());
+                lista.Add(bekertSzam);
+            }
+            for (int i = 0; i < lista.Count; i++)
+            {
+                if (max < lista[i])
+                {
+                    max = lista[i];
+                }
+
+            }
+            Console.WriteLine("A legnagyobb szám:{0} ", max);
+            Console.ReadKey();
         }
     }
 }
