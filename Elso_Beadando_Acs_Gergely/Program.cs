@@ -10,37 +10,45 @@ namespace Elso_Beadando_Acs_Gergely
     {
         static void Main(string[] args)
         {
-            List<int> lista = new List<int>();
-            int max = 0;
-            int bekertSzam = 0;
-            int bekeresSzam = 0;
-            int min = 1000000000;
-            Console.WriteLine("Adja meg hány szám közül szeretné megkeresni a legnagyobbat: ");
-            bekeresSzam = Convert.ToInt32(Console.ReadLine());
-            for (int i = 0; i < bekeresSzam; i++)
+            try
             {
-                bekertSzam = Convert.ToInt16(Console.ReadLine());
-                lista.Add(bekertSzam);
-            }
-            for (int i = 0; i < lista.Count; i++)
-            {
-                if (max < lista[i])
+                List<int> lista = new List<int>();
+                int max = 0;
+                int bekertSzam = 0;
+                int bekeresSzam = 0;
+                int min = 1000000000;
+                Console.WriteLine("Adja meg hány szám közül szeretné megkeresni a legnagyobbat: ");
+                bekeresSzam = Convert.ToInt32(Console.ReadLine());
+                for (int i = 0; i < bekeresSzam; i++)
                 {
-                    max = lista[i];
+                    bekertSzam = Convert.ToInt16(Console.ReadLine());
+                    lista.Add(bekertSzam);
                 }
-
-            }
-            Console.WriteLine("A legnagyobb szám:{0} ", max);
-            for (int i = 0; i < lista.Count; i++)
-            {
-                if (min > lista[i])
+                for (int i = 0; i < lista.Count; i++)
                 {
-                    min = lista[i];
-                }
+                    if (max < lista[i])
+                    {
+                        max = lista[i];
+                    }
 
+                }
+                Console.WriteLine("A legnagyobb szám:{0} ", max);
+                for (int i = 0; i < lista.Count; i++)
+                {
+                    if (min > lista[i])
+                    {
+                        min = lista[i];
+                    }
+
+                }
+                Console.WriteLine("A legkisebb szám: {0}", min);
             }
-            Console.WriteLine("A legkisebb szám: {0}", min);
-        Console.ReadKey();
+            catch (Exception)
+            {
+                Console.WriteLine("Kérem csak számot használjon."
+                    );
+            }
+            Console.ReadKey();
         }
     }
 }
