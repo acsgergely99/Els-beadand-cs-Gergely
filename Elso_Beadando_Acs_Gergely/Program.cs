@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Elso_Beadando_Acs_Gergely
+namespace gyakorlas
 {
     class Program
     {
