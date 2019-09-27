@@ -13,8 +13,10 @@ namespace Elso_Beadando_Acs_Gergely
             List<int> lista = new List<int>();
             int max = 0;
             int bekertSzam = 0;
-            Console.WriteLine("Kérem adjon meg 10számot!");
-            for (int i = 0; i < 10; i++)
+            int bekeresSzam = 0;
+            Console.WriteLine("Adja meg hány szám közül szeretné megkeresni a legnagyobbat: ");
+            bekeresSzam = Convert.ToInt32(Console.ReadLine());
+            for (int i = 0; i < bekeresSzam; i++)
             {
                 bekertSzam = Convert.ToInt16(Console.ReadLine());
                 lista.Add(bekertSzam);
